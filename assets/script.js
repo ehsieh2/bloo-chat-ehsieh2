@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", (_event) => {
   const messages = document.getElementById("messages");
   const messageToSend = document.getElementById("txt");
   form.addEventListener("submit", (event) => {
+
     socket.emit("message", {
       user: username,
       message: messageToSend.value,

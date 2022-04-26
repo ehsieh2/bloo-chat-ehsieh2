@@ -19,10 +19,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/chatroom", (req, res) => {
-  res.render("chatroom.njk", { uname: req.query.uname });
+  res.render("chatroom.njk", { uname: req.query.uname }); //would XSS happen here?
 });
 
 io.on("connection", function (socket) {
+  socket.broadcast.emit("hello",'World');
   socket.on("message", (msg) => {
     debug(`${msg.user}: ${msg.message}`);
     //Broadcast the message to everyone
