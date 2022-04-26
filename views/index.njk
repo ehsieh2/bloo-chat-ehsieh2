@@ -9,12 +9,15 @@
 {% block form %} 
   <div id="userForm">
     <form action="/chatroom" id="chatForm">
-      <input name="uname" id="txt" autocomplete="off" autofocus="on" placeholder="type your nickname here..."/>
-      <button>Join</button>
+      <input name="username" id=“uname” autocomplete="off" autofocus="on" placeholder="type Username…”/>
+      <input name="password" id=“pname” autocomplete="off" autofocus="on" placeholder="type Password…”name/>
+      <button id="login">Log in</button>
+      <button id="registar">Create Account</button>
     </form>
   </div>
 {% endblock %}
 
 {% block script %} 
+  <script src="frontPage.js"></script>
 {% end block %}
   
