@@ -1,4 +1,4 @@
-const db = require("./data/db");
+const db = require("./data/db.js");
 const auth = require("./routes/auth.js");
 const debug = require("debug")("bloo-chat");
 const nunjucks = require("nunjucks");
@@ -17,6 +17,7 @@ nunjucks.configure("views", {
   express: app,
 });
 
+app.use(auth);
 app.use(express.static("assets"));
 
 app.get("/", (req, res) => {

@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", (_event) => {
   const messages = document.getElementById("messages");
   const messageToSend = document.getElementById("txt");
   const appName = "BlooChatApp";
+  socket.emit("log on", { name: username });
+  
   form.addEventListener("submit", (event) => {
     socket.emit("message", {
       user: username,
