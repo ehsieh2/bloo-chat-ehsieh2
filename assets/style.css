@@ -16,6 +16,23 @@ h1 {
   font-size: xx-large;
 }
 
+div {
+  background: #fff;
+  padding: 3px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
+  width: 14%;
+  background: #000051;
+  border: none;
+  padding: 10px;
+  margin-left: 2%;
+  color: white;
+}
+
 form {
   background: #fff;
   padding: 3px;
@@ -58,6 +75,27 @@ form button {
 
 #messages li {
   padding: 5px 10px;
+}
+
+.user_badge_format {
+  font-weight: bold;
+  background-color: #2c2121;
+  padding: 2px 6px 2px 6px;
+  border-radius: 5px;
+}
+
+.normal_text {
+  padding: 2px 6px 2px 6px;
+}
+
+.green_text {
+  padding: 2px 6px 2px 6px;
+  color: rgb(0,128,0);
+}
+
+.red_text {
+  padding: 2px 6px 2px 6px;
+  color: rgb(255, 0, 0);
 }
 
 .chat {

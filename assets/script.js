@@ -19,26 +19,26 @@ document.addEventListener("DOMContentLoaded", (_event) => {
 
   // append the chat text message
   socket.on("message", (msg) => {
-    writeMessage(msg.user, msg.message, "text_normal", messages);
+    writeMessage(msg.user, msg.message, "normal_text", messages);
   });
 
   socket.on("log on",(usr) => {
-    writeMessage(appName, `${usr.name} joined the room`,"text_green",messages);
+    writeMessage(appName, `${usr.name} joined the room`,"green_text",messages);
   });
 
   socket.on("log off", (usr) => {
-    writeMessage(appName, `${usr.name} left the room`, "text_red", messages);
+    writeMessage(appName, `${usr.name} left the room`, "red_text", messages);
   });
 
   socket.on("welcome",(welc) => {
-    writeMessage(appName,`Welcome ${welc.name}!`, "text_normal", messages);
+    writeMessage(appName,`Welcome ${welc.name}!`, "normal_text", messages);
     if (welc.users) {
-      writeMessage(appName,`Online users ${welc.users}`, "text_normal", messages);
+      writeMessage(appName,`Online users ${welc.users}`, "normal_text", messages);
     } else {
       writeMessage(
         appName,
         `Unfortunately no one is online at the moment 😔`,
-        "text_normal",
+        "normal_text",
         messages
       );
     }
@@ -49,7 +49,7 @@ function writeMessage(username,msg,text_class,messages) {
   const message = document.createElement("li");
   const user = document.createElement("span");
   const text = document.createElement("span");
-  user.className = "user_badge";
+  user.className = "user_badge_foramt";
   text.className = text_class;
   user.innerText = `${username}`;
   text.innerText = `${msg}`;
