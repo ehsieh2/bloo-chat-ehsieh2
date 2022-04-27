@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", (_event) => {
   const form = document.getElementById("chatForm");
   const messages = document.getElementById("messages");
   const messageToSend = document.getElementById("txt");
-  const appName = "BlooChatApp";
   socket.emit("log on", { name: username });
+  const appName = "BlooChatApp";
   
   form.addEventListener("submit", (event) => {
     socket.emit("message", {
@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", (_event) => {
   });
 });
 
-function writeMessage(username,msg,text_class,messages) {
+function writeMessage(username, msg, text_class, messages) {
   const message = document.createElement("li");
   const user = document.createElement("span");
   const text = document.createElement("span");
-  user.className = "user_badge_foramt";
+  user.className = "user_badge_format";
   text.className = text_class;
   user.innerText = `${username}`;
   text.innerText = `${msg}`;
