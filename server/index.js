@@ -1,4 +1,4 @@
-const db = require("./data/db.js");
+const db = require("./data/db");
 const auth = require("./routes/auth.js");
 const debug = require("debug")("bloo-chat");
 const nunjucks = require("nunjucks");
