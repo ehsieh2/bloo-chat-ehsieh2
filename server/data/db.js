@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const URI = `mongodb+srv://bloo-chat-admin:DJNtxpe5JVSb5H22@bloo-chat.ampn0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-
+//const URI = `mongodb+srv://bloo-chat-admin:DJNtxpe5JVSb5H22@bloo-chat.ampn0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const URI = process.env.DB_URI;
 async function connect() {
   try {
     await mongoose.connect(URI);
