@@ -1,23 +1,17 @@
-{%extends "parent.njk" %}
-
+{% extends "parent.njk" %}
 {% block content %}
   <h1>Welcome
-  <br><br>to<br><br>
-  Bloo Chat!</h1>
+      <br><br>to<br><br>
+      Bloo Chat!</h1>
 {% endblock %}
-
-{% block form %} 
+{% block form %}
   <div id="userForm">
-    <form action="/chatroom" id="chatForm">
-      <input name="username" id=“uname” autocomplete="off" autofocus="on" placeholder="type Username…”/>
-      <input name="password" id=“pname” autocomplete="off" autofocus="on" placeholder="type Password…”name/>
-      <button id="login">Log in</button>
-      <button id="registar">Create Account</button>
-    </form>
+    <input name="username" id="uname" autocomplete="off" autofocus="on" placeholder="Username"/>
+    <input name="password" id="pword" autocomplete="off" autofocus="on" placeholder="Password"/>
+    <button id="login">Log In</button>
+    <button id="register">Register</button>
   </div>
 {% endblock %}
-
-{% block script %} 
-  <script src="frontPage.js"></script>
+{% block script %}
+  <script src="frontpage.js"></script>
 {% endblock %}
-  
