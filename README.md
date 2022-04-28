@@ -14,3 +14,6 @@ The application is deployed on [Heroku](https://bloo-chat-starter.herokuapp.com/
 The bloo chat is split up between sever and client side.
 For the client side we use the script.js file as well as the frontPage.js which are connected to each other. The frontPage.js post request the "/authenticate" and "/registar" for user input and checks if their credentials are acceptable or if they are making a new account (then they need to be added to list of users). After the user either registers or is authenticated the username is sent direct to "/chatroom". When chatroom.njk runs it calls script.js which then uses socket.io to establish a connection and uses io.emit to send messages.
 For the server side, we use index.js which uses the express app and sets up nunjucks for parent.njk, index.njk, and chatroom.njk. there is also a socket io connecetion in index.js which connects with the client side. index.js also uses auth to register and/or authorize users via mongoDB.
+
+WORKS LOCALLY BUT couldnt get heroku to run
+Git repo: https://github.com/cs280spring-classroom/bloo-chat-ehsieh2 
