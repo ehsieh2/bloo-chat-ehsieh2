@@ -17,3 +17,4 @@ For the server side, we use index.js which uses the express app and sets up nunj
 
 WORKS LOCALLY BUT couldnt get heroku to run
 Git repo: https://github.com/cs280spring-classroom/bloo-chat-ehsieh2 
+Heroku: (not working) https://bloo-chat-ehsieh2.herokuapp.com/ 
